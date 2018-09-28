@@ -6,6 +6,8 @@ import 'package:learning_flutter/widgets/me.dart';
 import '../widgets/place_holder.dart';
 
 class HomePage extends StatefulWidget {
+  static String tag = 'home-page';
+
   @override
   State<StatefulWidget> createState() => _HomeState();
 }
@@ -18,8 +20,8 @@ class _HomeState extends State<HomePage> {
 
   _HomeState() {
     _children = new List<Widget>();
-    _children.add(ChatRoomWidget());
     _children.add(DiscoveryWidget());
+    _children.add(ChatRoomWidget());
     _children.add(MeWidget());
   }
 
@@ -43,12 +45,12 @@ class _HomeState extends State<HomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.chat),
-            title: new Text('聊天'),
-          ),
-          BottomNavigationBarItem(
             icon: new Icon(Icons.contacts),
             title: new Text('通訊錄'),
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.chat),
+            title: new Text('聊天'),
           ),
           BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('設定'))
         ],
@@ -60,10 +62,10 @@ class _HomeState extends State<HomePage> {
     setState(() {
       switch (index) {
         case 0:
-          _title = "聊天";
+          _title = "通訊錄";
           break;
         case 1:
-          _title = "通訊錄";
+          _title = "聊天";
           break;
         case 2:
           _title = "設定";

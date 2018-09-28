@@ -99,7 +99,7 @@ class _ChatRoomState extends State<ChatRoomWidget> {
                       color: Colors.green,
                       borderRadius:
                           new BorderRadius.all(Radius.circular(50.0))),
-                  child: new Text("996",
+                  child: new Text("99+",
                       style: new TextStyle(
                         color: Colors.white,
                         //fontFamily: "Roboto",
