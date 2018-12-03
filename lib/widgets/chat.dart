@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/wakanda/manager.dart';
 import './chat_message.dart';
 
 class ChatWidget extends StatefulWidget {
@@ -7,15 +8,14 @@ class ChatWidget extends StatefulWidget {
 }
 
 class _ChatState extends State<ChatWidget> {
-  final TextEditingController textEditingController =
-      new TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
   final List<ChatMessage> _messages = <ChatMessage>[
-    new ChatMessage("aaa"),
+    ChatMessage("aaa"),
   ];
 
   void _handleSubmit(String text) {
     textEditingController.clear();
-    ChatMessage chatMessage = new ChatMessage(text);
+    ChatMessage chatMessage = ChatMessage(text);
     setState(() {
       //used to rebuild our widget
       _messages.insert(0, chatMessage);
@@ -23,26 +23,26 @@ class _ChatState extends State<ChatWidget> {
   }
 
   Widget _textComposerWidget() {
-    return new IconTheme(
-      data: new IconThemeData(color: Colors.blue),
-      child: new Container(
+    return IconTheme(
+      data: IconThemeData(color: Colors.blue),
+      child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
-        child: new Row(
+        child: Row(
           children: <Widget>[
-            new Container(
-              child: new IconButton(icon: new Icon(Icons.add)),
+            Container(
+              child: IconButton(icon: Icon(Icons.add)),
             ),
-            new Flexible(
-              child: new TextField(
-                decoration: new InputDecoration.collapsed(hintText: "輸入訊息"),
+            Flexible(
+              child: TextField(
+                decoration: InputDecoration.collapsed(hintText: "輸入訊息"),
                 controller: textEditingController,
                 onSubmitted: _handleSubmit,
               ),
             ),
-            new Container(
+            Container(
               //margin: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: new IconButton(
-                icon: new Icon(Icons.send),
+              child: IconButton(
+                icon: Icon(Icons.send),
                 onPressed: () => _handleSubmit(textEditingController.text),
               ),
             )
@@ -54,28 +54,28 @@ class _ChatState extends State<ChatWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return new Column(
+    return Column(
       children: <Widget>[
-        new Flexible(
+        Flexible(
             child: Container(
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
-              image: new AssetImage("assets/images/chat_background.jpg"),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/chat_background.jpg"),
               fit: BoxFit.cover,
             ),
           ),
-          child: new ListView.builder(
-            padding: new EdgeInsets.all(8.0),
+          child: ListView.builder(
+            padding: EdgeInsets.all(8.0),
             reverse: true,
             itemBuilder: (_, int index) => _messages[index],
             itemCount: _messages.length,
           ),
         )),
-        new Divider(
+        Divider(
           height: 1.0,
         ),
-        new Container(
-          decoration: new BoxDecoration(
+        Container(
+          decoration: BoxDecoration(
             color: Theme.of(context).cardColor,
           ),
           child: _textComposerWidget(),

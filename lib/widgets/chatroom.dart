@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/wakanda/manager.dart';
 import 'package:learning_flutter/widgets/chat.dart';
 import 'package:learning_flutter/widgets/xk.dart';
 import './chat_message.dart';
@@ -12,59 +13,56 @@ class _ChatRoomState extends State<ChatRoomWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Scaffold(
-        body: new ListView(
+    return Scaffold(
+        body: ListView(
       children: <Widget>[
-        new ListTile(
+        ListTile(
             onTap: () {
-              Navigator.of(context)
-                  .push(new MaterialPageRoute(builder: (context) {
-                return new XKTabBar();
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return XKTabBar();
               }));
             },
-            leading: new Image.asset(
+            leading: Image.asset(
               "assets/images/golang.png",
               width: 40.0,
               height: 40.0,
               fit: BoxFit.cover,
             ),
-            title: new Text("張學友歌迷會"),
-            subtitle: new Text("我能為您服務嗎?"),
-            trailing: new Column(
+            title: Text("張學友歌迷會"),
+            subtitle: Text("我能為您服務嗎?"),
+            trailing: Column(
               children: <Widget>[
-                new Text("5:47 PM"),
+                Text("5:47 PM"),
               ],
             )),
-        new Divider(color: Colors.grey),
-        new ListTile(
+        Divider(color: Colors.grey),
+        ListTile(
             onTap: () {
               print("tap on 官方客服");
-              Navigator.of(context)
-                  .push(new MaterialPageRoute(builder: (context) {
-                return new XKTabBar();
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return XKTabBar();
               }));
             },
-            leading: new Image.asset(
+            leading: Image.asset(
               "assets/images/golang.png",
               width: 40.0,
               height: 40.0,
               fit: BoxFit.cover,
             ),
-            title: new Text("官方客服"),
-            subtitle: new Text("我能為您服務嗎?"),
-            trailing: new Column(
+            title: Text("官方客服"),
+            subtitle: Text("我能為您服務嗎?"),
+            trailing: Column(
               children: <Widget>[
-                new Text("9/15"),
-                new Container(
-                  margin: new EdgeInsets.only(top: 8.0),
-                  padding: new EdgeInsets.all(4.0),
-                  decoration: new BoxDecoration(
+                Text("9/15"),
+                Container(
+                  margin: EdgeInsets.only(top: 8.0),
+                  padding: EdgeInsets.all(4.0),
+                  decoration: BoxDecoration(
                       color: Colors.green,
-                      borderRadius:
-                          new BorderRadius.all(Radius.circular(50.0))),
-                  child: new Text(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0))),
+                  child: Text(
                     "5",
-                    style: new TextStyle(
+                    style: TextStyle(
                       color: Colors.white,
                       //fontFamily: "Roboto",
                       fontSize: 12.0,
@@ -73,34 +71,32 @@ class _ChatRoomState extends State<ChatRoomWidget> {
                 ),
               ],
             )),
-        new Divider(color: Colors.grey),
-        new ListTile(
+        Divider(color: Colors.grey),
+        ListTile(
           onTap: () {
-            Navigator.of(context)
-                .push(new MaterialPageRoute(builder: (context) {
-              return new XKTabBar();
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return XKTabBar();
             }));
           },
-          leading: new Image.asset(
+          leading: Image.asset(
             "assets/images/golang.png",
             width: 40.0,
             height: 40.0,
             fit: BoxFit.cover,
           ),
-          title: new Text("LebronJames"),
-          subtitle: new Text("We will take over this game"),
-          trailing: new Column(
+          title: Text("LebronJames"),
+          subtitle: Text("We will take over this game"),
+          trailing: Column(
             children: <Widget>[
-              new Text("9/15"),
-              new Container(
-                  margin: new EdgeInsets.only(top: 8.0),
-                  padding: new EdgeInsets.all(4.0),
-                  decoration: new BoxDecoration(
+              Text("9/15"),
+              Container(
+                  margin: EdgeInsets.only(top: 8.0),
+                  padding: EdgeInsets.all(4.0),
+                  decoration: BoxDecoration(
                       color: Colors.green,
-                      borderRadius:
-                          new BorderRadius.all(Radius.circular(50.0))),
-                  child: new Text("99+",
-                      style: new TextStyle(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0))),
+                  child: Text("99+",
+                      style: TextStyle(
                         color: Colors.white,
                         //fontFamily: "Roboto",
                         fontSize: 12.0,
@@ -108,7 +104,7 @@ class _ChatRoomState extends State<ChatRoomWidget> {
             ],
           ),
         ),
-        new Divider(color: Colors.grey),
+        Divider(color: Colors.grey),
       ],
     ));
   }

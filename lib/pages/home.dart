@@ -14,12 +14,12 @@ class HomePage extends StatefulWidget {
 
 class _HomeState extends State<HomePage> {
   String _title = "聊天";
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   List<Widget> _children;
 
   _HomeState() {
-    _children = new List<Widget>();
+    _children = List<Widget>();
     _children.add(DiscoveryWidget());
     _children.add(ChatRoomWidget());
     _children.add(MeWidget());
@@ -29,10 +29,12 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text(_title)),
+        centerTitle: true,
+        // title: Center(child: Text(_title)),
+        title: Text(_title),
         actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.add),
+          IconButton(
+            icon: Icon(Icons.add),
             onPressed: () {
               print("do add");
             },
@@ -45,12 +47,12 @@ class _HomeState extends State<HomePage> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.contacts),
-            title: new Text('通訊錄'),
+            icon: Icon(Icons.contacts),
+            title: Text('通訊錄'),
           ),
           BottomNavigationBarItem(
-            icon: new Icon(Icons.chat),
-            title: new Text('聊天'),
+            icon: Icon(Icons.chat),
+            title: Text('聊天'),
           ),
           BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text('設定'))
         ],

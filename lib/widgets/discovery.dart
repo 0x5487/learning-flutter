@@ -9,99 +9,99 @@ class _DiscoveryState extends State<DiscoveryWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Scaffold(
-        body: new ListView(
+    return Scaffold(
+        body: ListView(
       children: <Widget>[
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
+          child: Container(
             height: 50.0,
-            child: new ListTile(
-              leading: new Icon(Icons.camera),
-              title: new Text("朋友圈"),
+            child: ListTile(
+              leading: Icon(Icons.camera),
+              title: Text("朋友圈"),
             ),
             color: Colors.white,
           ),
           color: Colors.grey[200],
         ),
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
+          child: Container(
             height: 50.0,
-            child: new ListTile(
-              leading: new Icon(Icons.crop_free),
-              title: new Text("扫一扫"),
+            child: ListTile(
+              leading: Icon(Icons.crop_free),
+              title: Text("扫一扫"),
             ),
             color: Colors.white,
           ),
           color: Colors.grey[200],
         ),
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
+          child: Container(
             height: 50.0,
-            child: new ListTile(
-              leading: new Icon(Icons.star),
-              title: new Text("看一看"),
+            child: ListTile(
+              leading: Icon(Icons.star),
+              title: Text("看一看"),
             ),
             color: Colors.white,
           ),
           color: Colors.grey[200],
         ),
-        new Container(
-          child: new ListTile(
-            leading: new Icon(Icons.search),
-            title: new Text("搜一搜"),
+        Container(
+          child: ListTile(
+            leading: Icon(Icons.search),
+            title: Text("搜一搜"),
           ),
           color: Colors.white,
           height: 50.0,
         ),
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
-            child: new ListTile(
-              leading: new Icon(Icons.people),
-              title: new Text("附近的人"),
+          child: Container(
+            child: ListTile(
+              leading: Icon(Icons.people),
+              title: Text("附近的人"),
             ),
             color: Colors.white,
             height: 50.0,
           ),
           color: Colors.grey[200],
         ),
-        new Container(
-          child: new ListTile(
-            leading: new Icon(Icons.hourglass_empty),
-            title: new Text("漂流瓶"),
+        Container(
+          child: ListTile(
+            leading: Icon(Icons.hourglass_empty),
+            title: Text("漂流瓶"),
           ),
           color: Colors.white,
           height: 50.0,
         ),
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
-            child: new ListTile(
-              leading: new Icon(Icons.shopping_cart),
-              title: new Text("购物"),
+          child: Container(
+            child: ListTile(
+              leading: Icon(Icons.shopping_cart),
+              title: Text("购物"),
             ),
             color: Colors.white,
             height: 50.0,
           ),
           color: Colors.grey[200],
         ),
-        new Container(
-          child: new ListTile(
-            leading: new Icon(Icons.games),
-            title: new Text("游戏"),
+        Container(
+          child: ListTile(
+            leading: Icon(Icons.games),
+            title: Text("游戏"),
           ),
           color: Colors.white,
           height: 50.0,
         ),
-        new Container(
+        Container(
           padding: const EdgeInsets.only(top: 20.0),
-          child: new Container(
-            child: new ListTile(
-              leading: new Icon(Icons.apps),
-              title: new Text("小程序"),
+          child: Container(
+            child: ListTile(
+              leading: Icon(Icons.apps),
+              title: Text("小程序"),
             ),
             color: Colors.white,
             height: 50.0,

@@ -10,43 +10,27 @@ class ChatMessage extends StatelessWidget {
   }
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      margin: const EdgeInsets.symmetric(vertical: 10.0),
-      child: new Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          new Container(
-            margin: const EdgeInsets.only(right: 5.0),
-            child: new CircleAvatar(
-              maxRadius: 13.00,
-              child: new Text(_name[0]),
+    return Row(
+      children: <Widget>[
+        Container(
+          margin: const EdgeInsets.only(right: 5.0),
+          child: CircleAvatar(
+            maxRadius: 15.00,
+            child: Text(_name[0]),
+          ),
+        ),
+        Flexible(
+          child: Container(
+            padding: EdgeInsets.all(5.0),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(12.0))),
+            child: Text(
+              text,
             ),
           ),
-          new Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              new Container(
-                color: Colors.transparent,
-                child: new Container(
-                    padding: new EdgeInsets.all(5.0),
-                    decoration: new BoxDecoration(
-                        color: Colors.white,
-                        borderRadius:
-                            new BorderRadius.all(Radius.circular(12.0))),
-                    child: new Center(
-                      child: new Text(
-                        text,
-                        style: new TextStyle(
-                            //fontFamily: "Roboto",
-                            //fontSize: 8.0,
-                            ),
-                      ),
-                    )),
-              ),
-            ],
-          )
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

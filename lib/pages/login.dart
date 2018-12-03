@@ -52,7 +52,8 @@ class _LoginPageState extends State<LoginPage> {
           height: 42.0,
           onPressed: () {
             print("go to home page");
-            Navigator.of(context).pushNamed(HomePage.tag);
+            Navigator.pushReplacementNamed(
+                context, '/home'); // don't go back to login
           },
           color: Colors.lightBlueAccent,
           child: Text('Log In', style: TextStyle(color: Colors.white)),

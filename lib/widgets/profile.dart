@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 
 class MInfoVC extends StatefulWidget {
   @override
-  _MInfoVCState createState() => new _MInfoVCState();
+  _MInfoVCState createState() => _MInfoVCState();
 }
 
 class _MInfoVCState extends State<MInfoVC> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("我的信息"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("我的信息"),
       ),
-      body: new ListView(
+      body: ListView(
         children: <Widget>[
-          new Container(
+          Container(
             padding: const EdgeInsets.only(top: 20.0),
             color: Colors.grey[200],
-            child: new Container(
+            child: Container(
               color: Colors.white,
               height: 80.0,
-              child: new ListTile(
-                title: new Text("头像"),
-                trailing: new Image.asset(
+              child: ListTile(
+                title: Text("头像"),
+                trailing: Image.asset(
                   "assets/images/golang.png",
                   width: 45.0,
                   height: 45.0,
@@ -30,51 +30,51 @@ class _MInfoVCState extends State<MInfoVC> {
               ),
             ),
           ),
-          new Container(
+          Container(
             padding: const EdgeInsets.only(top: 20.0),
             color: Colors.grey[200],
-            child: new Container(
+            child: Container(
               color: Colors.white,
               height: 45.0,
-              child: new ListTile(
-                title: new Text("名字"),
-                trailing: new Text("Jason"),
+              child: ListTile(
+                title: Text("名字"),
+                trailing: Text("Jason"),
               ),
             ),
           ),
-          new Container(
+          Container(
             color: Colors.white,
             height: 45.0,
-            child: new ListTile(
-              title: new Text("微信号"),
-              trailing: new Text("tony001"),
+            child: ListTile(
+              title: Text("微信号"),
+              trailing: Text("tony001"),
             ),
           ),
-          new Container(
+          Container(
             color: Colors.white,
             height: 45.0,
-            child: new ListTile(
-              title: new Text("我的二维码"),
-              trailing: new Icon(Icons.fullscreen),
+            child: ListTile(
+              title: Text("我的二维码"),
+              trailing: Icon(Icons.fullscreen),
             ),
           ),
-          new Container(
+          Container(
             color: Colors.white,
             height: 45.0,
-            child: new ListTile(
-              title: new Text("更多"),
-              trailing: new Icon(
+            child: ListTile(
+              title: Text("更多"),
+              trailing: Icon(
                 Icons.arrow_forward_ios,
                 size: 17.0,
               ),
             ),
           ),
-          new Container(
+          Container(
             color: Colors.white,
             height: 45.0,
-            child: new ListTile(
-              title: new Text("我的地址"),
-              trailing: new Icon(
+            child: ListTile(
+              title: Text("我的地址"),
+              trailing: Icon(
                 Icons.arrow_forward_ios,
                 size: 17.0,
               ),
