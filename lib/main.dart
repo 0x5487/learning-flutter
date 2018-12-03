@@ -4,11 +4,11 @@ import 'package:learning_flutter/pages/home.dart';
 import 'package:learning_flutter/wakanda/manager.dart';
 
 void main() => runApp(MyApp());
-WakandaManager _wakandaManager = new WakandaManager();
+WakandaManager _wakandaManager = WakandaManager();
 
 class MyApp extends StatelessWidget {
   MyApp() {
-    _wakandaManager.open();
+    //_wakandaManager.open();
     // sendHello();
     //printHello();
   }
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       num++;
       var content = "print Hello world $num";
       print(content);
-      await Future.delayed(new Duration(milliseconds: 1000));
+      await Future.delayed(Duration(milliseconds: 1000));
     }
   }
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       print(content);
       _wakandaManager.SendText(content);
       num++;
-      await Future.delayed(new Duration(milliseconds: 1000));
+      await Future.delayed(Duration(milliseconds: 1000));
     }
   }
 
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
     //_wakandaManager.open();
     //sendHello();
     return MaterialApp(
-      title: 'Wechat',
+      title: 'Wakanda',
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
