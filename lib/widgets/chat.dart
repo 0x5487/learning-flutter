@@ -13,6 +13,38 @@ class _ChatState extends State<ChatWidget> {
     ChatMessage("aaa"),
   ];
 
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Flexible(
+            child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/chat_background.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: ListView.builder(
+            padding: EdgeInsets.all(8.0),
+            reverse: true,
+            itemCount: _messages.length,
+            itemBuilder: (_, int index) => _messages[index],
+          ),
+        )),
+        Divider(
+          height: 1.0,
+        ),
+        Container(
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+          ),
+          child: _textComposerWidget(),
+        )
+      ],
+    );
+  }
+
   void _handleSubmit(String text) {
     textEditingController.clear();
     ChatMessage chatMessage = ChatMessage(text);
@@ -49,38 +81,6 @@ class _ChatState extends State<ChatWidget> {
           ],
         ),
       ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Flexible(
-            child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/chat_background.jpg"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: ListView.builder(
-            padding: EdgeInsets.all(8.0),
-            reverse: true,
-            itemBuilder: (_, int index) => _messages[index],
-            itemCount: _messages.length,
-          ),
-        )),
-        Divider(
-          height: 1.0,
-        ),
-        Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
-          ),
-          child: _textComposerWidget(),
-        )
-      ],
     );
   }
 }

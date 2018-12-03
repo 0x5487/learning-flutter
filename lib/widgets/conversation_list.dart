@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/pages/chat.dart';
 import 'package:learning_flutter/providers/conversation_provider.dart';
 import 'package:learning_flutter/wakanda/conversation.dart';
-import 'package:learning_flutter/widgets/xk.dart';
 
 class ConversationList extends StatelessWidget {
   @override
@@ -14,6 +14,7 @@ class ConversationList extends StatelessWidget {
         builder:
             (BuildContext content, AsyncSnapshot<List<Conversation>> snapshot) {
           return ListView.builder(
+              key: PageStorageKey<String>("conversation_listview"),
               scrollDirection: Axis.vertical,
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
@@ -24,7 +25,7 @@ class ConversationList extends StatelessWidget {
                       onTap: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
-                          return XKTabBar();
+                          return ChatPage(source.title);
                         }));
                       },
                       leading: Image.asset(
@@ -34,15 +35,43 @@ class ConversationList extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                       title: Text(source.title),
-                      subtitle: Text(source.lastContent),
+                      subtitle: Text(
+                        source.lastContent,
+                        overflow: TextOverflow.ellipsis,
+                      ),
                       trailing: Column(
-                        children: <Widget>[
-                          Text(source.date),
-                        ],
+                        children: _buildTrailing(source),
                       )),
                   Divider(color: Colors.grey),
                 ]);
               });
         });
+  }
+
+  List<Widget> _buildTrailing(Conversation source) {
+    var widgets = <Widget>[
+      Text(source.date),
+    ];
+
+    if (source.unreadCount > 0) {
+      var unreadContainer = Container(
+        margin: EdgeInsets.only(top: 8.0),
+        padding: EdgeInsets.all(4.0),
+        decoration: BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.all(Radius.circular(50.0))),
+        child: Text(
+          "5",
+          style: TextStyle(
+            color: Colors.white,
+            //fontFamily: "Roboto",
+            fontSize: 12.0,
+          ),
+        ),
+      );
+
+      widgets.add(unreadContainer);
+    }
+    return widgets;
   }
 }

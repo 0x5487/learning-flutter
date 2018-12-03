@@ -70,6 +70,6 @@ class ConversationBloc {
       ..lastContent = "我能為您服務嗎?"
       ..date = "5:47 PM"
       ..unreadCount = 0;
-    _conversations.add(c7);
+    _conversations.add(c8);
   }
 }
