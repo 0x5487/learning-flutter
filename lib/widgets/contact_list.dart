@@ -36,7 +36,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -54,7 +57,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          ),
         ],
       ),
       Column(
@@ -72,7 +78,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -90,7 +99,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -108,7 +120,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -126,7 +141,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -144,7 +162,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
       Column(
@@ -162,7 +183,10 @@ class ContactList extends StatelessWidget {
               height: 40.0,
             ),
           ),
-          Divider(color: Colors.grey),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
         ],
       ),
     ]);

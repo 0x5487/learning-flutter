@@ -42,7 +42,10 @@ class ConversationList extends StatelessWidget {
                       trailing: Column(
                         children: _buildTrailing(source),
                       )),
-                  Divider(color: Colors.grey),
+                  Divider(
+                    color: Colors.grey,
+                    height: 0,
+                  )
                 ]);
               });
         });
