@@ -37,20 +37,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //_wakandaManager.open();
-    //sendHello();
     return MaterialApp(
       title: 'Wakanda',
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
-      // Start the app with the "/" named route. In our case, the app will start
-      // on the FirstScreen Widget
       initialRoute: '/',
       routes: {
-        // When we navigate to the "/" route, build the FirstScreen Widget
         '/': (context) => LoginPage(),
-        // When we navigate to the "/second" route, build the SecondScreen Widget
         '/home': (context) => HomePage(),
       },
     );

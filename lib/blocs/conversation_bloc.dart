@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:learning_flutter/wakanda/conversation.dart';
 
 class ConversationBloc {
