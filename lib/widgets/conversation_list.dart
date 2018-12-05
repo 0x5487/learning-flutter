@@ -28,15 +28,15 @@ class ConversationList extends StatelessWidget {
                           return ChatPage(source.title);
                         }));
                       },
-                      leading: Image.asset(
-                        "assets/images/golang.png",
-                        width: 40.0,
-                        height: 40.0,
-                        fit: BoxFit.cover,
+                      leading: CircleAvatar(
+                        maxRadius: 30.00,
+                        backgroundImage: NetworkImage(
+                            "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
                       ),
                       title: Text(source.title),
                       subtitle: Text(
                         source.lastContent,
+                        maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
                       trailing: Column(
@@ -61,10 +61,10 @@ class ConversationList extends StatelessWidget {
         margin: EdgeInsets.only(top: 8.0),
         padding: EdgeInsets.all(4.0),
         decoration: BoxDecoration(
-            color: Colors.green,
+            color: Colors.grey,
             borderRadius: BorderRadius.all(Radius.circular(50.0))),
         child: Text(
-          "5",
+          source.unreadCount.toString(),
           style: TextStyle(
             color: Colors.white,
             //fontFamily: "Roboto",

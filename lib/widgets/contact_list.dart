@@ -26,14 +26,35 @@ class ContactList extends StatelessWidget {
           ListTile(
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ChatPage("angela wang");
+                return ChatPage("Angela Wang");
               }));
             },
-            title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
+            title: Text("Angela Wang"),
+            leading: CircleAvatar(
+              maxRadius: 20.00,
+              backgroundImage: NetworkImage(
+                  "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
+            ),
+          ),
+          Divider(
+            color: Colors.grey,
+            height: 0,
+          )
+        ],
+      ),
+      Column(
+        children: <Widget>[
+          ListTile(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                return ChatPage("城武 金");
+              }));
+            },
+            title: Text("城武 金"),
+            leading: CircleAvatar(
+              maxRadius: 20.00,
+              backgroundImage: NetworkImage(
+                  "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
             ),
           ),
           Divider(
@@ -51,31 +72,10 @@ class ContactList extends StatelessWidget {
               }));
             },
             title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-            height: 0,
-          ),
-        ],
-      ),
-      Column(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ChatPage("angela wang");
-              }));
-            },
-            title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
+            leading: CircleAvatar(
+              maxRadius: 20.00,
+              backgroundImage: NetworkImage(
+                  "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
             ),
           ),
           Divider(
@@ -93,10 +93,10 @@ class ContactList extends StatelessWidget {
               }));
             },
             title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
+            leading: CircleAvatar(
+              maxRadius: 20.00,
+              backgroundImage: NetworkImage(
+                  "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
             ),
           ),
           Divider(
@@ -114,73 +114,10 @@ class ContactList extends StatelessWidget {
               }));
             },
             title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-            height: 0,
-          )
-        ],
-      ),
-      Column(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ChatPage("angela wang");
-              }));
-            },
-            title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-            height: 0,
-          )
-        ],
-      ),
-      Column(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ChatPage("angela wang");
-              }));
-            },
-            title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
-            ),
-          ),
-          Divider(
-            color: Colors.grey,
-            height: 0,
-          )
-        ],
-      ),
-      Column(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ChatPage("angela wang");
-              }));
-            },
-            title: Text("angela wang"),
-            leading: Image.asset(
-              "assets/images/angela.jpg",
-              width: 40.0,
-              height: 40.0,
+            leading: CircleAvatar(
+              maxRadius: 20.00,
+              backgroundImage: NetworkImage(
+                  "http://inews.gtimg.com/newsapp_match/0/3736920928/0"),
             ),
           ),
           Divider(

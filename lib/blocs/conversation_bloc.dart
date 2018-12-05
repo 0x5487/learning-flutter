@@ -19,7 +19,7 @@ class ConversationBloc {
       ..lastContent =
           "金融巨鱷索羅斯給投資人的警語:人之所以犯錯誤，不是因為他們不懂，而是因為他們自己以為什麼都懂！財信傳媒董事長謝金河2日在臉書貼文指出，這句話原本是說給投資人聽的，但現在台灣大選過後，好像是在說給民進黨執政團隊聽的，尤其是蔡總統"
       ..date = "5:47 PM"
-      ..unreadCount = 0;
+      ..unreadCount = 999;
     _conversations.add(c1);
 
     var c2 = Conversation()
