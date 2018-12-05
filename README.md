@@ -6,3 +6,7 @@ A new Flutter project.
 
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
+
+
+## Create application icon
+flutter pub pub run flutter_launcher_icons:main
