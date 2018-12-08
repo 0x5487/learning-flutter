@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/pages/bubble.dart';
 import 'package:learning_flutter/pages/login.dart';
 import 'package:learning_flutter/pages/home.dart';
 import 'package:learning_flutter/wakanda/manager.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
+
 WakandaManager _wakandaManager = WakandaManager();
 
 class MyApp extends StatelessWidget {
@@ -46,6 +52,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginPage(),
         '/home': (context) => HomePage(),
+        '/bubble': (context) => BubblePage(),
       },
     );
   }

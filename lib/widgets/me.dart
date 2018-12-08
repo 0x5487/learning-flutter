@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_flutter/pages/bubble.dart';
 import 'package:learning_flutter/widgets/profile.dart';
 
 class MeWidget extends StatefulWidget {
@@ -39,6 +40,12 @@ class _MeState extends State<MeWidget> {
             child: ListTile(
               leading: Icon(Icons.dashboard),
               title: Text("收藏"),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return BubblePage();
+                }));
+              },
             ),
             color: Colors.white,
             height: 50.0,
