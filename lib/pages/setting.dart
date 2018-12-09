@@ -2,15 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:learning_flutter/pages/bubble.dart';
 import 'package:learning_flutter/widgets/profile.dart';
 
-class MeWidget extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _MeState();
-}
-
-class _MeState extends State<MeWidget> {
+class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
         body: ListView(
       children: <Widget>[
@@ -20,9 +14,9 @@ class _MeState extends State<MeWidget> {
             height: 80.0,
             child: ListTile(
               leading: Image.asset("assets/images/golang.png"),
-              title: Text("Jason"),
-              subtitle: Text("微信号：ty001"),
-              trailing: Icon(Icons.fullscreen),
+              title: Text("Jason Lee"),
+              subtitle: Text("@hello"),
+              trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {

@@ -3,10 +3,8 @@ import 'package:learning_flutter/pages/bubble.dart';
 import 'package:learning_flutter/pages/login.dart';
 import 'package:learning_flutter/pages/home.dart';
 import 'package:learning_flutter/wakanda/manager.dart';
-import 'package:flutter/rendering.dart';
 
 void main() {
-  debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
