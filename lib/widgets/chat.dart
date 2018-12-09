@@ -9,7 +9,7 @@ class ChatWidget extends StatefulWidget {
 
 class _ChatState extends State<ChatWidget> {
   final TextEditingController textEditingController = TextEditingController();
-  final List<Bubble> _messages = <Bubble>[
+  final List<Widget> _messages = <Widget>[
     Bubble(
       message:
           '52歲、曾執導電影「艋舺」大賣的知名導演鈕承澤（豆導）驚傳性侵女性工作人員？本報掌握獨家消息，指鈕承澤在拍攝電影「跑馬」（暫定）期間疑性侵女性工作人員（以A女代稱）。據悉該女5日下午已在友人陪同下赴婦幼警察局報案、做筆錄，消息曝光後，記者也循線找到女友人，對方透露A女此刻身心重創，已完全無法工作。',
@@ -42,6 +42,18 @@ class _ChatState extends State<ChatWidget> {
       delivered: true,
       isMe: true,
     ),
+    Container(
+      margin: EdgeInsets.only(top: 5, bottom: 5),
+      child: Text(
+        "今天",
+        style: new TextStyle(
+          background: Paint()..color = Colors.grey,
+          color: Colors.white,
+          fontSize: 12.0,
+        ),
+        textAlign: TextAlign.center,
+      ),
+    ),
     Bubble(
       message: 'I\'ve told you so dude!',
       time: '12:00',
@@ -57,11 +69,11 @@ class _ChatState extends State<ChatWidget> {
         Flexible(
             child: Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/chat_background.jpg"),
-              fit: BoxFit.cover,
-            ),
-          ),
+              // image: DecorationImage(
+              //   image: AssetImage("assets/images/chat_background.jpg"),
+              //   fit: BoxFit.cover,
+              // ),
+              ),
           child: ListView.builder(
             padding: EdgeInsets.all(8.0),
             reverse: true,
